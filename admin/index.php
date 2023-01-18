@@ -32,6 +32,7 @@
 </head>
 
 <body>
+<form  method="post" action="">
     <div class="container-xxl position-relative bg-white d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -49,16 +50,16 @@
                     <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="index.php" class="">
-                                <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>Admin </h3>
+                                <h3 class="text-primary text-center"></i>Admin Sign In </h3>
                             </a><br>
-                            <h3>Sign In</h3>
+                           
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
                             <label for="floatingInput">Email address</label>
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="pass" >
                             <label for="floatingPassword">Password</label>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
@@ -68,15 +69,16 @@
                             </div>
                             <a href="">Forgot Password</a>
                         </div>
-                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
-                        <p class="text-center mb-0">Don't have an Account? <a href="signup">Sign Up</a></p>
+                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4" name="submit">Sign In</button>
+                        
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Sign In End -->
     </div>
-
+    </form>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

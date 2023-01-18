@@ -1297,64 +1297,7 @@ include_once('header.php');
 			</div>
 					</div>
 					
-				<footer class="footer footer_default">
-	<div class="container"><div class="row top">
-		<div class="col-lg-3 col-md-6">
-							<div class="footer_col1">
-					<div id="custom_html-27" class="widget_text widget  widget_custom_html"><h4 class="footer-widget-title" >Get in Contact</h4><div class="textwidget custom-html-widget"><div class="footer_contact">
-<div class="ireca_info mob_yellow"><i class="icon_pin_alt"></i><a href="https://www.google.com/maps/dir//-37.8173277,144.955924/@-37.817328,144.955924,20z?hl=en-US" target="_blank" rel="noopener"><span class="text">Rock St 12, Newyork City, USA</span></a></div>
-<div class="ireca_info mob_yellow"><i class="icon_mobile"></i><a href="tel:+18889993333
-"><span class="text">236-895-4732</span></a></div>
-<div class="ireca_info mob_yellow"><i class="icon_mail_alt"></i><a href="https://demo.ovatheme.com/cdn-cgi/l/email-protection#f9968f988d919c949cb99e94989095d79a9694"><span class="text"><span class="__cf_email__" data-cfemail="b5dac3d4c1ddd0d8d0f5d2d8d4dcd99bd6dad8">[email&#160;protected]</span></span></a></div>
-<a href="https://www.google.com/maps/dir//-37.8173277,144.955924/@-37.817328,144.955924,20z?hl=en-US" target="_blank" rel="nofollow noopener" class="link_find_map">Find Us On Map</a>
-</div></div></div>				</div>
-					</div>
-		<div class="col-lg-3 col-md-6">
-							<div class="footer_col2">
-					<div id="recent-posts-widget-with-thumbnails-3" class="widget  recent-posts-widget-with-thumbnails">
-<div id="rpwwt-recent-posts-widget-with-thumbnails-3" class="rpwwt-widget">
-<h4 class="footer-widget-title" >Latest Blog</h4>
-	<ul>
-		<li><a href="tout-terrain-gold-city-2/index.html"><span class="rpwwt-post-title">Tout Terrain gold city</span></a><div class="rpwwt-post-categories">In Motobike</div><div class="rpwwt-post-date">August 15, 2018</div></li>
-		<li><a href="car-driving-through-a-tunnel/index.html"><span class="rpwwt-post-title">Car driving a tunnel</span></a><div class="rpwwt-post-categories">In Car</div><div class="rpwwt-post-date">August 15, 2018</div></li>
-		<li><a href="how-to-drive-a-car/index.html"><span class="rpwwt-post-title">How to drive a car ?</span></a><div class="rpwwt-post-categories">In Car</div><div class="rpwwt-post-date">August 15, 2018</div></li>
-	</ul>
-</div><!-- .rpwwt-widget -->
-</div>				</div>
-					</div>
-		<div class="col-lg-3 col-md-6">
-							<div class="footer_col3">
-					<div id="nav_menu-2" class="widget  widget_nav_menu"><h4 class="footer-widget-title" >Usefull Links</h4><div class="menu-usefull-links-container"><ul id="menu-usefull-links" class="menu"><li id="menu-item-1577" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1577"><a href="#">Our Partners</a></li>
-<li id="menu-item-1578" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1578"><a href="#">Careers</a></li>
-<li id="menu-item-1579" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1579"><a href="#">Sitemap</a></li>
-<li id="menu-item-1580" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1580"><a href="#">Investors</a></li>
-<li id="menu-item-1581" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1581"><a href="#">Request a Quote</a></li>
-</ul></div></div>				</div>
-					</div>
-		<div class="col-lg-3 col-md-6">
-							<div class="footer_col4">
-					<div id="custom_html-28" class="widget_text widget  widget_custom_html"><h4 class="footer-widget-title" >Working Hours</h4><div class="textwidget custom-html-widget"><div class="ovacrs_working_hour "><div class="title">Sales Department:</div><div class="desc">Monday to Friday: 08.00 to 18.00 <br/>Saturday & Sunday: <span>Closed</span></div></div>
-
-<div class="ovacrs_working_hour last"><div class="title">Service Department:</div><div class="desc">Monday to Friday: 08.00 to 18.00 <br/>Saturday & Sunday: <span>Closed</span></div></div></div></div>				</div>
-					</div>
-	</div></div>
-
-	<div class="container"><div class="row bottom">
-		<div class="col-md-12">
-							<div class="footer_social">
-					<div id="custom_html-31" class="widget_text widget  widget_custom_html"><div class="textwidget custom-html-widget"><ul class="ireca_socials ">
-<li class="d-inline"><a href="#" class="facebook" target="_blank" rel="noopener">Facebook</a></li>
-<li class="d-inline"><a href="#" class="twitter" target="_blank" rel="noopener">Twitter</a></li>
-<li class="d-inline"><a href="#" class="youtube" target="_blank" rel="noopener">Youtube</a></li>
-<li class="d-inline"><a href="#" class="google" target="_blank" rel="noopener">Google+</a></li>
-<li class="d-inline"><a href="#" class="rss" target="_blank" rel="noopener">Rss feed</a></li>
-</ul></div></div>				</div>
-					</div>
-		<div class="col-md-12">
-							<div class="footer_copyright">
-					<div id="custom_html-29" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget">Copyright by ovatheme. All reserved</div></div>				</div>
-					</div>
-	</div></div>
+				
 
 <?php
 include_once('footer.php');

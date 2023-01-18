@@ -54,7 +54,14 @@
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                        <h6 class="mb-0">Adnan Kureshi</h6>
+                        <?php
+                        if(isset($_SESSION['admin_id']))
+                        {
+                            ?>
+                        <h6 class="mb-0"><?php echo $_SESSION['name']?></h6>
+                        <?php
+                        }
+                        ?>
                         <span>Admin</span>
                     </div>
                 </div>
@@ -169,16 +176,25 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
+                        
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <?php
+                            if(isset($_SESSION['admin_id']))
+                            {
+                                ?>
+                            
                             <img class="rounded-circle me-lg-2" src="img/pp.jpg" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">Adnan Kureshi</span>
+                            <span class="d-none d-lg-inline-flex">Hello,<?php echo $_SESSION['name']?> </span>
                         </a>
+
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">My Profile</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Log Out</a>
+                            <a href="logout" class="dropdown-item">Log Out</a>
                         </div>
                     </div>
                 </div>
+                <?php
+}
+?>
             </nav>
             <!-- Navbar End -->

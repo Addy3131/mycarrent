@@ -485,6 +485,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         color: #e9a31b;
     }
 
+    .logo
+    {
+         width: 300px;
+         height: 100px;
+    }
   
 
 
@@ -1390,8 +1395,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
 <meta name="generator" content="WordPress 6.1.1" />
 <meta name="generator" content="WooCommerce 7.1.0" />
-<link rel="canonical" href="index.php" />
-<link rel='shortlink' href='index.php' />
+<link rel="canonical" href="index" />
+<link rel='shortlink' href='index' />
 <link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embede7af.json?url=https%3A%2F%2Fdemo.ovatheme.com%2Fireca%2F" />
 <link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed81b9?url=https%3A%2F%2Fdemo.ovatheme.com%2Fireca%2F&amp;format=xml" />
         <script type="text/javascript">
@@ -1486,9 +1491,34 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 															<div class="col text-center">
 									<div id="custom_html-6" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><ul class="ireca_socials "><li class="d-inline"><a href="#" class="" target="_blank" rel="noopener"><i class="social_facebook"></i></a></li><li class="d-inline"><a href="#" class="" target="_blank" rel="noopener"><i class="social_twitter"></i></a></li><li class="d-inline"><a href="#" class="" target="_blank" rel="noopener"><i class="social_pinterest"></i></a></li><li class="d-inline"><a href="#" class="" target="_blank" rel="noopener"><i class="social_googleplus"></i></a></li><li class="d-inline"><a href="#" class="" target="_blank" rel="noopener"><i class="social_youtube_circle"></i></a></li><li class="d-inline"><a href="#" class="" target="_blank" rel="noopener"><i class="social_dribbble"></i></a></li></ul></div></div>								</div>
 							
-															<div class="col text-right">
-									<div id="custom_html-26" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="ireca_account"><a href="login.php">Login</a><span></span><a href="login.php">Register</a></div></div></div>								</div>
-							
+                                    <?php
+                                    if(isset($_SESSION['cus_id']))
+                                    {
+                                    ?>
+                                    <div class="col text-right">
+									<div id="custom_html-26" class="widget_text widget widget_custom_html">
+                                        <div class="textwidget custom-html-widget"><div class="ireca_account">
+                                            <a href="account">Hello,<?php echo $_SESSION['cus_name']?></a><span></span>
+                                            <a href="logout">Logout</a>
+                                        </div>
+                                    </div></div>								
+                                </div>
+                                <?php
+                                    }
+                                    else
+                                    {
+                                        ?>
+								<div class="col text-right">
+									<div id="custom_html-26" class="widget_text widget widget_custom_html">
+                                        <div class="textwidget custom-html-widget"><div class="ireca_account">
+                                            <a href="login">Login</a><span></span>
+                                            <a href="signup">Register</a>
+                                        </div>
+                                    </div></div>								
+                                </div>
+							<?php
+                                    }
+                                    ?>
 							
 							<div class="irece_bottom_line d-none d-lg-block"></div>
 
@@ -1504,8 +1534,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 					<div class=" flex-grow-1 d-none d-md-none d-sm-none d-lg-block">
 						<div class="logo">
 
-							<a href="index.php" class="navbar-brand py-0">
-																	<img src="wp-content/uploads/2018/05/logo.png" alt="Ireca &#8211; Rental System Car, MotorBike, Boat, Vehicle WordPress Theme">
+							<a href="index" class="navbar-brand py-0 logo">
+																	<img src="images/logo.png" alt="Ireca &#8211; Rental System Car, MotorBike, Boat, Vehicle WordPress Theme">
 															</a>
 
 
@@ -1550,7 +1580,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 							<nav class="navbar navbar-expand-lg pl-0 pr-0 py-0 px-0">
 
 
-								<a href="index.php" class="navbar-brand d-md-block d-sm-block d-lg-none py-0">
+								<a href="index" class="navbar-brand d-md-block d-sm-block d-lg-none py-0">
 																			<img src="wp-content/uploads/2018/05/logo_mobile.png" alt="Ireca &#8211; Rental System Car, MotorBike, Boat, Vehicle WordPress Theme">
 																	</a>
 
@@ -1586,7 +1616,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 								  											<div class="form-inline header1_home_icon ml-lr-5 d-none d-lg-block">
 											<div id="custom_html-12" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="wrap_icon"><i class="icon_house_alt"></i></div></div></div>										</div>
 									
-								  	<ul id="menu-primary-menu" class="navbar-nav mr-auto"><li id="menu-item-1835" class="nav-item menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-1835 dropdown dropdown"><a title="Home" href="index.php" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a><button type="button" class="dropdown-toggle"><i class="arrow_carrot-down"></i></button>
+								  	<ul id="menu-primary-menu" class="navbar-nav mr-auto"><li id="menu-item-1835" class="nav-item menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-1835 dropdown dropdown"><a title="Home" href="index" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a><button type="button" class="dropdown-toggle"><i class="arrow_carrot-down"></i></button>
 <ul role="menu" class=" dropdown-menu">
 	<li id="menu-item-1557" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-344 current_page_item menu-item-1557 active "><a title="Home Car" href="index.html" class=" nav-link ">Home Car</a></li>
 	<li id="menu-item-1556" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1556 "><a title="Home Motorbike" href="home-motorbike/index.html" class=" nav-link ">Home Motorbike</a></li>
@@ -1632,16 +1662,16 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 	<li id="menu-item-1830" class="nav-item menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1830 "><a title="Boat Shop" href="rental-category/sell/boat-shop/index.html" class=" nav-link ">Boat Shop</a></li>
 </ul>
 </li>
-<li id="menu-item-1298" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1298 "><a title="Service" href="service.php" class=" nav-link ">Service</a></li>
-<li id="menu-item-1423" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1423 "><a title="Contact" href="contact.php" class=" nav-link ">Contact</a></li>
-<li id="menu-item-1423" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1423 "><a title="Contact" href="account.php" class=" nav-link ">Account</a></li>
+<li id="menu-item-1298" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1298 "><a title="Service" href="service" class=" nav-link ">Service</a></li>
+<li id="menu-item-1423" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1423 "><a title="Contact" href="contact-us" class=" nav-link ">Contact</a></li>
+<li id="menu-item-1423" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1423 "><a title="Contact" href="account" class=" nav-link ">Account</a></li>
 <li id="menu-item-1165" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1165 dropdown dropdown"><a title="Pages" href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a><button type="button" class="dropdown-toggle"><i class="arrow_carrot-down"></i></button>
 <ul role="menu" class=" dropdown-menu">
-	<li id="menu-item-1386" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1386 "><a title="About" href="aboutus.php" class=" nav-link ">About</a></li>
+	<li id="menu-item-1386" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1386 "><a title="About" href="about" class=" nav-link ">About</a></li>
 
-	<li id="menu-item-34" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-34 "><a title="Cart" href="cart.php" class=" nav-link ">Cart</a></li>
+	<li id="menu-item-34" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-34 "><a title="Cart" href="cart" class=" nav-link ">Cart</a></li>
 	<li id="menu-item-35" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-35 "><a title="Checkout" href="checkout/index.html" class=" nav-link ">Checkout</a></li>
-	<li id="menu-item-37" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-37 "><a title="My account" href="my-account/index.html" class=" nav-link ">My account</a></li>
+
 	<li id="menu-item-1461" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1461 dropdown dropdown"><a title="Header" href="#" class=" nav-link ">Header <span class="caret"></span></a><button type="button" class="dropdown-toggle"><i class="arrow_carrot-down"></i></button>
 	<ul role="menu" class=" dropdown-menu">
 		<li id="menu-item-1858" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1858 "><a title="Header Default" href="header-no-background/index.html" class=" nav-link ">Header Default</a></li>
