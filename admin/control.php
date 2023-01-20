@@ -49,69 +49,74 @@ class control extends model
             case '/dashboard':
                 include_once('dashboard.php');
                 break;
-
-            case '/status':
-                    if(isset($_REQUEST['statuscidbtn']))
-                    {
-                        $cid=$_REQUEST['statuscidbtn'];
-                        $where=array("cus_id"=>$cid);
-            
-                        $run=$this->select_where('user',$where);
-                        $fetch=$run->fetch_object();
-                        $status=$fetch->status;
-                        if($status=="block")
-                        {
-                            $data=array("status"=>"unblock");
-                            $res=$this->update('user',$data,$where);
-                            if($res)
-                            {
-                                echo "<script>
-                                    alert('Unblock Success');
-                                    window.location='manage-user';
-                                    </script>";
-                            }
-                        }
-                        else
-                        {
-                            $data=array("status"=>"block");
-                            $res=$this->update('user',$data,$where);
-                            if($res)
-                            {
-                                unset($_SESSION['cus_name']);
-                                unset($_SESSION['cus_id']);
-                                unset($_SESSION['cemail']);
-                                
-                                echo "<script>
-                                    alert('Block Success');
-                                    window.location='manage-user';
-                                    </script>";
-                            }
-                        }
-                    }
-                    
-                    break;
-            
-            case '/delete':
-                if(isset($_REQUEST['delcidbtn']))
+               
+			case '/status':
+                if(isset($_REQUEST['statuscidbtn']))
                 {
-                    $cid=$_REQUEST['delcidbtn'];
-                    $where=array('cus_id'=>$cid);
-
-                    $res=$this->select_where('user',$where);
-                    $fetch=$res->fetch_object();
-                    $old_file=$fetch->file;
-
-                    $run=$this->delete('user',$where);
-                    if($run)
+                    $uid=$_REQUEST['statuscidbtn'];
+                    $where=array("cus_id"=>$uid);
+                    $run=$this->select_where('customer',$where);
+                    $fetch=$run->fetch_object();
+                    $status=$fetch->status;
+                    if($status=="Block")
                     {
-                        unlink('../homecar/images/upload/customer/'.$old_file);
-                        echo "<script>
-                        alert('delete success');
-                        window.loction='manage-user';
-                        </script>";
+                        $data=array("status"=>"Unblock");
+                        $res=$this->update('customer',$data,$where);
+                        if($res)
+                        {
+                            echo "<script>
+                                alert('Unblock Success');
+                                window.location='manage-user';
+                                </script>";
+                        }
                     }
-
+                    else
+                    {
+                        $data=array("status"=>"Block");
+                        $res=$this->update('customer',$data,$where);
+                        if($res)
+                        {
+                            unset($_SESSION['cemail']);
+                            unset($_SESSION['cus_id']);
+                            unset($_SESSION['cus_name']);
+                            
+                            echo "<script>
+                                alert('Block Success');
+                                window.location='manage-user';
+                                </script>";
+                        }
+                    }
                 }
+                
+                break;
+            
+           
+                case '/delete':
+                    if(isset($_REQUEST['delcidbtn']))
+                    {
+                        $cus_id=$_REQUEST['delcidbtn'];
+                        $where=array("cus_id"=>$cus_id);
+                        
+                        // img del
+                        $stmt = $conn->prepare("DELETE FROM customer WHERE name = :name");
+                                    $stmt->bindParam(':name', $name);
+
+                                    // Execute the DELETE statement
+                                    $stmt->execute();
+                        if($run)
+                        {
+                            unlink('../homecar/images/upload/customer/'.$old_file); 
+                            echo "<script>
+                                alert('Delete Success');
+                                window.location='manage-user';
+                                </script>";
+                        }
+                        else{
+                            echo "<script>
+                                alert('Delete Fail');
+                                </script>";
+                        }
+                    }
                 break;
 
             case '/manage-booking':
@@ -136,7 +141,7 @@ class control extends model
                 break;
 
             case '/manage-user':
-                $customer_arr=$this->select('user');
+                $customer_arr=$this->select('customer');
                 include_once('manage_user.php');
                 break;
 

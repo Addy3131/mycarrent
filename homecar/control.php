@@ -19,7 +19,7 @@ class control extends model
                     $enc_pass = md5($cpass);
 
                     $where = array("cemail" => $cemail, "cpass" => $enc_pass);
-                    $run = $this->select_where('user', $where);
+                    $run = $this->select_where('customer', $where);
 
                     $chk = $run->num_rows;
                     if ($chk == 1) {
@@ -27,7 +27,8 @@ class control extends model
 
                         $_SESSION['cus_id'] = $fetch->cus_id;
                         $_SESSION['cus_name'] = $fetch->cus_name;
-                        $_SESSION['cemail'] = $fetch->cemail;;
+                        $_SESSION['cemail'] = $fetch->cemail;
+                        $_SESSION['cgen'] = $fetch->cgen;
                         echo "<script>
                         alert('Login Success');
                         window.location='index';
@@ -59,9 +60,9 @@ class control extends model
                     $created_dt = date("Y-m-d H:i:s");
                     $updated_dt = date("Y-m-d H:i:s");
 
-                    $data = array("cus_name" => $cus_name, "cemail" => $cemail, "cpass" => $enc_pass, "cphone" => $cphone, "cgen" => $cgen, "file" => $file,"city"=>$city, "created_dt" => $created_dt, "updated_dt" => $updated_dt);
+                    $data = array("cus_name" => $cus_name, "cemail" => $cemail, "cpass" => $enc_pass, "cphone" => $cphone, "cgen" => $cgen, "file" => $file,"city"=>$city);
 
-                    $ins = $this->insert('user', $data);
+                    $ins = $this->insert('customer', $data);
                     if ($ins) {
                         echo "<script>
                         alert('Register Success');
