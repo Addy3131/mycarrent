@@ -1545,10 +1545,10 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 					
 										<div class="d-none d-lg-block">
 						<div class="beside_logo d-flex">
-							<div id="custom_html-8" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="ireca_info "><i class="icon_pin_alt"></i><a href="https://www.google.com/maps/dir//-37.8173277,144.955924/@-37.817328,144.955924,20z?hl=en-US" target="_blank" rel="noopener"><span class="text">Maninagar, Ahmedabad, India</span></a></div>
+							<div id="custom_html-8" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="ireca_info "><i class="icon_pin_alt"></i><a href="https://www.google.com/maps/place/Maninagar,+Ahmedabad,+Gujarat/@22.992738,72.6043796,15z/data=!3m1!4b1!4m5!3m4!1s0x395e85c2e335ed6b:0xd19a77c6688f5c9b!8m2!3d22.995165!4d72.604097" target="_blank" rel="noopener"><span class="text">Maninagar, Ahmedabad, India</span></a></div>
 <div class="ireca_info box_dotted"><i class="icon_mobile"></i><a href="tel:+18889993333
 "><span class="text">8780359698</span></a></div>
-<div class="ireca_info "><i class="icon_mail_alt"></i><a href="https://demo.ovatheme.com/cdn-cgi/l/email-protection#620d1403160a070f0722050f030b0e4c010d0f"><span class="text"><span class="__cf_email__" data-cfemail="f59a8394819d909890b59298949c99db969a98">[email&#160;protected]</span></span></a></div></div></div>						</div>	
+<div class="ireca_info "><i class="icon_mail_alt"></i><a href="https://demo.ovatheme.com/cdn-cgi/l/email-protection#620d1403160a070f0722050f030b0e4c010d0f"><span class="text"><span class="__cf_email__" data-cfemail="f59a8394819d909890b59298949c99db969a98">adnankureshi15@gmail.com</span></span></a></div></div></div>						</div>	
 					</div>
 										
 											<div class="float-sm-right d-none d-lg-block">
@@ -1615,53 +1615,24 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 								  	
 								  											<div class="form-inline header1_home_icon ml-lr-5 d-none d-lg-block">
 											<div id="custom_html-12" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="wrap_icon"><i class="icon_house_alt"></i></div></div></div>										</div>
-									
-								  	<ul id="menu-primary-menu" class="navbar-nav mr-auto"><li id="menu-item-1835" class="nav-item menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-1835 dropdown dropdown"><a title="Home" href="index" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a><button type="button" class="dropdown-toggle"><i class="arrow_carrot-down"></i></button>
+                                           
+								  	<ul id="menu-primary-menu" class="navbar-nav mr-auto"><li id="menu-item-1835" class="nav-item menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-1835 dropdown dropdown"><a title="Home" href="index" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a><button type="button" class="dropdown-toggle"><i class="arrow_carrot-down"></i></button>
 <ul role="menu" class=" dropdown-menu">
-	<li id="menu-item-1557" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-344 current_page_item menu-item-1557 active "><a title="Home Car" href="index.html" class=" nav-link ">Home Car</a></li>
-	<li id="menu-item-1556" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1556 "><a title="Home Motorbike" href="home-motorbike/index.html" class=" nav-link ">Home Motorbike</a></li>
-	<li id="menu-item-1555" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1555 "><a title="Home Boat" href="home-boat/index.html" class=" nav-link ">Home Boat</a></li>
-	<li id="menu-item-2692" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-2692 "><a title="Home Landing Page" href="rental-landing-page/index.html" class=" nav-link ">Home Landing Page</a></li>
-	<li id="menu-item-2288" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-2288 "><a title="Home Search" href="home-search/index.html" class=" nav-link ">Home Search</a></li>
-	<li id="menu-item-2498" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-2498 "><a title="Home Map" href="home-map/index.html" class=" nav-link ">Home Map</a></li>
-	<li id="menu-item-2287" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-2287 "><a title="Home Video" href="home-video/index.html" class=" nav-link ">Home Video</a></li>
+
+                                    <?php if(!empty($category_arr))
+									{
+										foreach($category_arr as $data)
+										{
+                                            ?>				
+	<li id="menu-item-1557" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-344 current_page_item menu-item-1557 active "><a title="Home Car" href="index.html" class=" nav-link "><?php echo $data->cat_name?></a></li>
+	<?php
+										}
+									}
+									?> 
 </ul>
-</li>
-<li id="menu-item-1166" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1166 dropdown dropdown"><a title="Rental" href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Rental <span class="caret"></span></a><button type="button" class="dropdown-toggle"><i class="arrow_carrot-down"></i></button>
-<ul role="menu" class=" dropdown-menu">
-	<li id="menu-item-1187" class="nav-item menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1187 "><a title="Car" href="rental-category/rental/car/index.html" class=" nav-link ">Car</a></li>
-	<li id="menu-item-1188" class="nav-item menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1188 "><a title="Motors" href="rental-category/rental/motors/index.html" class=" nav-link ">Motors</a></li>
-	<li id="menu-item-1186" class="nav-item menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1186 "><a title="Boat" href="rental-category/rental/waterway/index.html" class=" nav-link ">Boat</a></li>
-	<li id="menu-item-1159" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1159 dropdown dropdown"><a title="Category Style" href="#" class=" nav-link ">Category Style <span class="caret"></span></a><button type="button" class="dropdown-toggle"><i class="arrow_carrot-down"></i></button>
-	<ul role="menu" class=" dropdown-menu">
-		<li id="menu-item-1158" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-1158 "><a title="3 columns" href="rental-category/rental/car/indexa905.html?total_other_features=0&amp;total_features=6&amp;rl_type=3columns" class=" nav-link ">3 columns</a></li>
-		<li id="menu-item-1160" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-1160 "><a title="2 columns" href="rental-category/rental/car/index339e.html?rl_type=2columns&amp;total_other_features=0&amp;total_features=6" class=" nav-link ">2 columns</a></li>
-		<li id="menu-item-1161" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-1161 "><a title="Style 1 - Sidebar" href="rental-category/rental/car/index99a8.html?rl_type=style1&amp;total_features=6&amp;total_other_features=4" class=" nav-link ">Style 1 &#8211; Sidebar</a></li>
-		<li id="menu-item-1162" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-1162 "><a title="Style 2 Sidebar" href="rental-category/rental/car/indexe31e.html?rl_type=style2&amp;total_features=4&amp;total_other_features=0" class=" nav-link ">Style 2 Sidebar</a></li>
-		<li id="menu-item-1163" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-1163 "><a title="Style 3 Sidebar" href="rental-category/rental/car/index7388.html?rl_type=style3&amp;total_features=4&amp;total_other_features=4" class=" nav-link ">Style 3 Sidebar</a></li>
-	</ul>
-</li>
-	<li id="menu-item-1177" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1177 dropdown dropdown"><a title="Detail" href="#" class=" nav-link ">Detail <span class="caret"></span></a><button type="button" class="dropdown-toggle"><i class="arrow_carrot-down"></i></button>
-	<ul role="menu" class=" dropdown-menu">
-		<li id="menu-item-1816" class="nav-item menu-item menu-item-type-post_type menu-item-object-product menu-item-1816 "><a title="Style 1" href="rental/2019-lexus-lf-lc/index.html" class=" nav-link ">Style 1</a></li>
-		<li id="menu-item-2324" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-2324 "><a title="Style 2" href="rental/2019-lexus-lineup/carpg3.php?rd_style=single-product2" class=" nav-link ">Style 2</a></li>
-		<li id="menu-item-2571" class="nav-item menu-item menu-item-type-post_type menu-item-object-product menu-item-2571 "><a title="Retal Period Time" href="rental/luxury-yacht-ocean-pj-45/index.html" class=" nav-link ">Retal Period Time</a></li>
-		<li id="menu-item-2901" class="nav-item menu-item menu-item-type-post_type menu-item-object-product menu-item-2901 "><a title="Rental Period UnFixed Time" href="rental/luxury-yacht-ocean-2020/index.html" class=" nav-link ">Rental Period UnFixed Time</a></li>
-		<li id="menu-item-1901" class="nav-item menu-item menu-item-type-post_type menu-item-object-product menu-item-1901 "><a title="Rent Day" href="rental/2019-lexus-lf-lc/index.html" class=" nav-link ">Rent Day</a></li>
-		<li id="menu-item-1819" class="nav-item menu-item menu-item-type-post_type menu-item-object-product menu-item-1819 "><a title="Rent Hour" href="rental/aprilia-rsv4-2018/index.html" class=" nav-link ">Rent Hour</a></li>
-		<li id="menu-item-1820" class="nav-item menu-item menu-item-type-post_type menu-item-object-product menu-item-1820 "><a title="Rent Mixed" href="rental/yacht-2003-jr-pk845l/index.html" class=" nav-link ">Rent Mixed</a></li>
-		<li id="menu-item-2890" class="nav-item menu-item menu-item-type-post_type menu-item-object-product menu-item-2890 "><a title="Transportation" href="rental/transportation/trans.php" class=" nav-link ">Transportation</a></li>
-	</ul>
-</li>
-</ul>
-</li>
-<li id="menu-item-1827" class="nav-item menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-1827 dropdown dropdown"><a title="Sell" href="rental-category/sell/index.html" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Sell <span class="caret"></span></a><button type="button" class="dropdown-toggle"><i class="arrow_carrot-down"></i></button>
-<ul role="menu" class=" dropdown-menu">
-	<li id="menu-item-1828" class="nav-item menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1828 "><a title="Seat cover" href="rental-category/sell/seat-cover/index.html" class=" nav-link ">Seat cover</a></li>
-	<li id="menu-item-1829" class="nav-item menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1829 "><a title="Motor biker" href="rental-category/sell/motor-biker/index.html" class=" nav-link ">Motor biker</a></li>
-	<li id="menu-item-1830" class="nav-item menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1830 "><a title="Boat Shop" href="rental-category/sell/boat-shop/index.html" class=" nav-link ">Boat Shop</a></li>
-</ul>
-</li>
+</li> 
+<li id="menu-item-1423" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1423 "><a title="Contact" href="sell" class=" nav-link ">Sell</a></li>
+
 <li id="menu-item-1298" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1298 "><a title="Service" href="service" class=" nav-link ">Service</a></li>
 <li id="menu-item-1423" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1423 "><a title="Contact" href="contact-us" class=" nav-link ">Contact</a></li>
 <li id="menu-item-1423" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1423 "><a title="Contact" href="account" class=" nav-link ">Account</a></li>

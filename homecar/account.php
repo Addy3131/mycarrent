@@ -1,7 +1,7 @@
 <?php
 include_once('header.php');
 ?>
-<h1 class="page-title text-center">My account </h1>
+<h1 class="page-title text-center">Preview Your  Account </h1>
 
 <div data-elementor-type="wp-post" data-elementor-id="9" class="elementor elementor-9 elementor-bc-flex-widget">
                 <div class="elementor-inner">
@@ -16,52 +16,53 @@ include_once('header.php');
         <div class="elementor-widget-container">
             <div class="elementor-shortcode"><div class="woocommerce"><div class="woocommerce-notices-wrapper"></div>
 
-<h2>Login</h2>
+            <div class="price_table  table-responsive "  >
 
-<form class="woocommerce-form woocommerce-form-login login" method="post">
+            <h4 class="page-title text-center">Account Details </h4>
 
-    
-    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-        <label for="username">Username or email address&nbsp;<span class="required">*</span></label>
-        <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="" />			</p>
-    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-        <label for="password">Password&nbsp;<span class="required">*</span></label>
-        <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" />
-    </p>
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+    <tr>
+											<th>Profile</th>
+                                           
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Password</th>
+                                            <th>Gender</th>
+											<th>city</th>
+											<th>phone</th>
+                                            <th>Edit</th>
 
-    
-    <p class="form-row">
-        <label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
-            <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span>Remember me</span>
-        </label>
-        <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="9eadbcba98" /><input type="hidden" name="_wp_http_referer" value="/ireca/my-account/" />				<button type="submit" class="woocommerce-button button woocommerce-form-login__submit wp-element-button" name="login" value="Log in">Log in</button>
-    </p>
-    <p class="woocommerce-LostPassword lost_password text-center" >
-        <a href="lost-password/index.php">Lost your password?</a>
-    </p>
+											
+											
+    </tr>
+    </thead>
+    <tbody>
+        <tr class="odd">
+            <td class="bold" data-title="Duration (Days)"><img src="images/upload/customer/<?php echo $fetch->file?>" alt="Image placeholder"  style="width:50px; height:50px; "></td>
+            <td class="bold" data-title="Duration (Days)"><?php echo  $fetch->cus_name?></td>
+            <td class="bold" data-title="Duration (Days)"><?php echo $fetch->cemail?></td>
+            <td class="bold" data-title="Duration (Days)"><?php echo $fetch->cpass?></td>
+            <td class="bold" data-title="Duration (Days)"><?php echo $fetch->cgen?></td>
+            <td class="bold" data-title="Duration (Days)"><?php echo  $fetch->city?></td>
+            <td class="bold" data-title="Duration (Days)"><?php  echo $fetch->cphone?></td>
 
-    
-</form>
-
-
-</div></div>
-        </div>
-        </div>
-                </div>
-            </div>
-</div>
-                        </div>
-            </div>
-</section>
-                            </div>
-    </div>
-            </div>
-<div class="page-links">
-
+            <td><a href="edituser?btnedit=<?php echo $fetch->cus_id?>" class="btn btn-primary">Edit</a></td>
+            
+            
+        </tr>
+        
+    </tbody>
+</table>
 </div>
 
 
-</div>
+    
+
+
+
+
+
 
 
 

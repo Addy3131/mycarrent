@@ -1,3 +1,19 @@
+<?php    
+if(isset($_SESSION['uid']))
+{
+	echo "<script>
+	window.location='index';
+	</script>";
+}
+
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
