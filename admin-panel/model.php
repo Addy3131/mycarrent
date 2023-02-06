@@ -133,6 +133,34 @@ class model
 		$run=$this->conn->query($del);  // run on db
 		return $run;
 	}
+
+	function search($tbl1,$tbl2,$on1,$col,$value)
+	{
+		$search="select * from $tbl1 join $tbl2 on $on1  where $col LIKE '$value%';";
+		$run=$this->conn->query($search);
+		while($fetch=$run->fetch_object())
+		{
+			$arr[]=$fetch;
+		}
+		if(!empty($arr))
+		{
+			return $arr;
+		}
+	}
+
+	function search_where($tbl1,$tbl2,$tbl3,$tbl4,$on1,$on2,$on3,$col,$value)
+	{
+		$search="select * from $tbl1 join $tbl2 on $on1 join $tbl3 on $on2 join $tbl4 on $on3 where $col LIKE '$value%';";
+		$run=$this->conn->query($search);
+		while($fetch=$run->fetch_object())
+		{
+			$arr[]=$fetch;
+		}
+		if(!empty($arr))
+		{
+			return $arr;
+		}
+	}
 	
 }
 $obj=new model;

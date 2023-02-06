@@ -1378,6 +1378,13 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
     
 </style>
+<style>
+    .size {
+        resize: none;
+        height: 100px;
+        width: 350px;
+      }
+</style>
 <link rel='stylesheet' id='elementor-icons-css' href='wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min91ce.css?ver=5.16.0' media='all' />
 <link rel='stylesheet' id='elementor-frontend-legacy-css' href='wp-content/plugins/elementor/assets/css/frontend-legacy.min7e2e.css?ver=3.8.1' media='all' />
 <link rel='stylesheet' id='elementor-frontend-css' href='wp-content/plugins/elementor/assets/css/frontend.min7e2e.css?ver=3.8.1' media='all' />
@@ -1471,6 +1478,42 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 		</style>
+        <script>
+    var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?25388';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+  "enabled":true,
+  "chatButtonSetting":{
+      "backgroundColor":"#4aa14a",
+      "ctaText":"",
+      "borderRadius":"20",
+      "marginLeft":"0",
+      "marginBottom":"50",
+      "marginRight":"50",
+      "position":"right"
+  },
+  "brandSetting":{
+      "brandName":"MY CAR RENT",
+      "brandSubTitle":"Typically replies within a day",
+      "brandImg":"https://cdn.clare.ai/wati/images/WATI_logo_square_2.png",
+      "welcomeText":"Hi there!\nHow can I help you?",
+      "messageText":"{{page_title}}Hello, I have a question about {{page_link}}",
+      "backgroundColor":"#0a5f54",
+      "ctaText":"Start Chat",
+      "borderRadius":"25",
+      "autoShow":false,
+      "phoneNumber":"918780359698"
+  }
+};
+    s.onload = function() {
+        CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+</script>
 		</head>
 
 <body class="home page-template page-template-elementor_header_footer page page-id-344 theme-ireca woocommerce-no-js elementor-default elementor-template-full-width elementor-kit-2874 elementor-page elementor-page-344 active_request_booking &quot; data-lang=&quot;en &quot; data-time=&quot;07:00, 07:30, 08:00, 08:30, 09:00, 09:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00 &quot; data-disweek=&quot;" data-lang="en" data-time="07:00, 07:30, 08:00, 08:30, 09:00, 09:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00" data-disweek="">
@@ -1632,17 +1675,17 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </ul>
 </li> 
 <li id="menu-item-1423" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1423 "><a title="Contact" href="sell" class=" nav-link ">Sell</a></li>
-
-<li id="menu-item-1298" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1298 "><a title="Service" href="service" class=" nav-link ">Service</a></li>
 <li id="menu-item-1423" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1423 "><a title="Contact" href="contact-us" class=" nav-link ">Contact</a></li>
 <li id="menu-item-1423" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1423 "><a title="Contact" href="account" class=" nav-link ">Account</a></li>
+<li id="menu-item-1423" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1423 "><a title="Contact" href="feedback" class=" nav-link ">Feedback</a></li>
+
 <li id="menu-item-1165" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1165 dropdown dropdown"><a title="Pages" href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a><button type="button" class="dropdown-toggle"><i class="arrow_carrot-down"></i></button>
 <ul role="menu" class=" dropdown-menu">
 	<li id="menu-item-1386" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1386 "><a title="About" href="about" class=" nav-link ">About</a></li>
 
 	<li id="menu-item-34" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-34 "><a title="Cart" href="cart" class=" nav-link ">Cart</a></li>
 	<li id="menu-item-35" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-35 "><a title="Checkout" href="checkout/index.html" class=" nav-link ">Checkout</a></li>
-
+   
 	<li id="menu-item-1461" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1461 dropdown dropdown"><a title="Header" href="#" class=" nav-link ">Header <span class="caret"></span></a><button type="button" class="dropdown-toggle"><i class="arrow_carrot-down"></i></button>
 	<ul role="menu" class=" dropdown-menu">
 		<li id="menu-item-1858" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1858 "><a title="Header Default" href="header-no-background/index.html" class=" nav-link ">Header Default</a></li>
@@ -1662,7 +1705,9 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </li>
 </ul>
 </li>
+<li id="menu-item-1423" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-1423 "><a title="Your_ad" href="ad" class=" nav-link ">Ads</a></li>
 </ul>
+
 						            										<div class="form-inline header1_search mx-0 ml-lg-5 d-none d-lg-block">
 											<div id="custom_html-10" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget">            <div class="ovacrs_searchwoo">
             <i class="icon_search"></i>

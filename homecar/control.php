@@ -200,7 +200,7 @@ class control extends model
         
                             $ins=$this->insert('advertisement',$data);
                             if ($ins) {
-                                 ;
+                                 
                             } else {
                                 echo "Not success";
                             }
@@ -226,6 +226,37 @@ class control extends model
             case '/service':
                 include_once('service.php');
                 break;
+            
+            case '/ad':
+                $where=array("advertisement.cus_id"=>$_SESSION['cus_id']);
+			$run=$this->select_where_join('advertisement','user','advertisement.cus_id=user.cus_id',$where);
+            
+			$fetch=$run->fetch_object();
+                include_once('ad.php');
+                break;
+
+                
+                
+                case '/feedback':
+                    if(isset($_REQUEST['submit']))
+                    {
+                    $cus_id = $_SESSION['cus_id'];
+                    $cemail = $_SESSION['cemail'];
+                    $subject = $_REQUEST['subject'];
+                    $message = $_REQUEST['message'];
+                    $data = array("cus_id"=>$cus_id,"cemail"=>$cemail,"subject"=>$subject,"message"=>$message);
+                    $ins=$this->insert('feedback',$data);
+                    if($ins)
+                    {
+                        
+                    }
+                    else
+                    {
+                        echo "Not successful";
+                    }
+                    }
+                    include_once('feedback.php');
+                    break;
 
             case '/logout':
                 unset($_SESSION['cus_id']);
@@ -241,4 +272,3 @@ class control extends model
 }
 
 $a = new control;
-?>

@@ -44,7 +44,7 @@ include_once('header.php');
             <td class="bold" data-title="Duration (Days)"><?php echo $fetch->cemail?></td>
             <td class="bold" data-title="Duration (Days)"><?php echo $fetch->cpass?></td>
             <td class="bold" data-title="Duration (Days)"><?php echo $fetch->cgen?></td>
-            <td class="bold" data-title="Duration (Days)"><?php echo  $fetch->city?></td>
+            <td class="bold" data-title="Duration (Days)"><?php echo  $fetch->city_name?></td>
             <td class="bold" data-title="Duration (Days)"><?php  echo $fetch->cphone?></td>
 
             <td><a href="edituser?btnedit=<?php echo $fetch->cus_id?>" class="btn btn-primary">Edit</a></td>

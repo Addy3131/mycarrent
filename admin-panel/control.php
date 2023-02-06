@@ -188,10 +188,10 @@ class control extends model   // step 2
 					
 				}
 			}
-			if(isset($_REQUEST['delfeed_idbtn']))
+			if(isset($_REQUEST['delfdidbtn']))
 			{
-				$feed_id=$_REQUEST['delfeed_idbtn'];
-				$where=array("feed_id"=>$feed_id);
+				$fd_id=$_REQUEST['delfdidbtn'];
+				$where=array("fd_id"=>$fd_id);
 				$run=$this->delete('feedback',$where);
 				if($run)
 				{
@@ -320,6 +320,7 @@ class control extends model   // step 2
 							alert('Block Success');
 							window.location='manage_user';
 							</script>";
+							
 					}
 				}
 			}
@@ -328,11 +329,45 @@ class control extends model   // step 2
 			
 			
 			case '/manage_feedback':
-			//$feedback_arr=$this->select('feedback');
-			$feedback_arr=$this->select_join2('user','feedback','user.uid=feedback.uid');
+				$feedback_arr=$this->select('feedback');
 			include_once('manage_feedback.php');
 			break;
-			
+
+			case '/searchData':
+				if(isset($_REQUEST['btn']))
+				{
+					$search=$_REQUEST['btn'];
+					$customer_arr=$this->search('user','city','user.city=city.city_id','user.cus_name',$search);
+					?>
+					<caption>Reg Form</caption>
+    	
+					<tr>
+					<td>Profile</td>
+					<td>Id</td>
+					<td>UserName</td>
+					<td>Gender</td>
+					<td>City</td>
+					</tr>
+					<?php
+					if(!empty($customer_arr))
+					{		
+						foreach($customer_arr as $f)
+						{		
+						?>
+						<tr>
+						<td><?php echo $f->file?></td>
+						<td><?php echo $f->cus_id?></td>
+						<td><?php echo $f->cus_name?></td>
+						<td><?php echo $f->cgen?></td>
+						<td><?php echo $f->city_name?></td>
+						</tr>
+						<?php
+						 }
+					}
+
+				}
+				
+			break;
 			default:
 			include_once('pnf.php');
 			break;

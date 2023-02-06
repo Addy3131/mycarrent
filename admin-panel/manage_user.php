@@ -8,7 +8,9 @@ include_once('header.php');
                 <h4 class="header-line">Manage User</h4>
                 
             </div>
-
+<form method="post" align="center">
+    <input type="text" name="search" value='<?php if(isset($search)){echo $search;}?>' placeholder="Search by name" onkeydown="getData(this.value)">
+</form>
         </div>
             <div class="row">
                 <div class="col-md-12">
@@ -19,7 +21,7 @@ include_once('header.php');
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <table class="table table-striped table-bordered table-hover" id="userdata">
                                     <thead>
                                         <tr>
 											<th>Profile</th>
@@ -28,7 +30,7 @@ include_once('header.php');
                                             <th>Username</th>
                                             <th>Password</th>
                                             <th>Gender</th>
-											<th>Languages</th>
+											<th>city</th>
 											<th>Edit</th>
 											<th>Delete</th>
                                         </tr>
@@ -69,6 +71,21 @@ include_once('header.php');
             
     </div>
     </div>
+    <script>
+function getData(search)
+{
+	$.ajax
+    ({
+        type:"post",
+        url:"searchData",
+        data:"btn=" + search,
+        success: function(data)
+        {
+            $("#userdata").html(data) ;
+        }
+    })
+}
+</script>
  <?php
  include_once('footer.php');
  ?>    

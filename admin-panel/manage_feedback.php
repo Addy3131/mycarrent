@@ -23,8 +23,8 @@ include_once('header.php');
                                     <thead>
                                         <tr>
                                             <th>Feedback id</th>
-											<th>Cust Id</th>
-                                            <th>Name</th>
+											<th>Cus_Id</th>
+                                            <th>Email</th>
                                             <th>Subject</th>
                                             <th>Feedback</th>
 											<th>Delete</th>
@@ -39,12 +39,12 @@ include_once('header.php');
 										{
 									?>
                                         <tr >
-                                            <td><?php echo $data->feed_id?></td>
-											<td><?php echo $data->uid?></td>
-											<td><?php echo $data->name?></td>
+                                            <td><?php echo $data->fd_id?></td>
+											<td><?php echo $data->cus_id?></td>
+											<td><?php echo $data->cemail?></td>
 											<td><?php echo $data->subject?></td>
-											<td><?php echo $data->feedback?></td>
-											<td><a href="delete?delfeed_idbtn=<?php echo $data->feed_id?>" class="btn btn-danger">Delete</a></td>
+											<td><?php echo $data->message?></td>
+											<td><a href="delete?delfdidbtn=<?php echo $data->fd_id?>" class="btn btn-danger">Delete</a></td>
                                         </tr>
                                     <?php
 										}
